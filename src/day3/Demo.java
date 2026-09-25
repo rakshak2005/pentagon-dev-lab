@@ -18,7 +18,7 @@ public static void main(String[] args) {
 		System.out.println("connection done");
 		
 		Statement stmt = con.createStatement();
-		System.out.println("platform created ");
+		System.out.println("platform created hello ");
 		
 		
 //		String sqry = "select * from student ";
