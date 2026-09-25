@@ -38,7 +38,7 @@ public static void main(String[] args) {
 //		String dqry = "delete from student where idno = 101";
 //		stmt.executeUpdate(dqry);
 		
-		String Iqury = "insert into student "
+		
 	} catch (ClassNotFoundException | SQLException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
