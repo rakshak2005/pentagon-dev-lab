@@ -14,10 +14,10 @@ public static void main(String[] args) {
 		Class.forName("com.mysql.cj.jdbc.Driver"); // load 
 		System.out.println("loaded sucessfully");
 		
-		Connection con =  DriverManager.getConnection("jdbc:mysql://localhost:3306/Student?user=root&password=MySQL@1234");
+		Connection con =  DriverManager.getConnection("jdbc:mysql://localhost:3306/Student?user=root&password=MySQL@1234");//connection
 		System.out.println("connection done");
 		
-		Statement stmt = con.createStatement();
+		Statement stmt = con.createStatement(); 
 		System.out.println("platform created hello ");
 		
 		
@@ -38,8 +38,23 @@ public static void main(String[] args) {
 //		String dqry = "delete from student where idno = 101";
 //		stmt.executeUpdate(dqry);
 		
+//		String isqry = "insert into student values (104,'kanishka','kanishka@gmail.com',8105555299,'kanishka')";
+//		boolean b = stmt.execute(isqry);
+//		System.out.println(b);
 		
-	} catch (ClassNotFoundException | SQLException e) {
+		String sqry = "select * from student ";
+		ResultSet rs = stmt.executeQuery(sqry);
+		System.out.println(rs);
+		
+		while(rs.next()) {
+			System.out.println("PHONE NUMBER Of " + rs.getString(2) + "  : "+ rs.getLong(4));
+		}
+		
+//		String crqry  = "CREATE TABLE employee (id INT,name VARCHAR(50),salary INT,department VARCHAR(50))";
+//		stmt.execute(crqry);
+		
+		
+		} catch (ClassNotFoundException | SQLException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
